@@ -64,7 +64,7 @@ import java.util.Scanner;
 // Related Topics 栈 字符串
 // 👍 2320 👎 0
 
-public class VaildString {
+public class VaildString_20 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();

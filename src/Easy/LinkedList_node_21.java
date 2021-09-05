@@ -4,7 +4,7 @@ package Easy;
  * @Author: yuchuanqi
  * @Date: 2021/4/12 10:47
  */
-
+//update
 public class LinkedList_node_21 {
     public int  val;
     public LinkedList_node_21  next;

@@ -9,9 +9,11 @@ public class toHex_405 {
     public static void main(String[] args) {
         String res=toHex(-1);
         System.out.println(res);
-        String res2=toHex2(-1);
-        System.out.println(res2);
+        String res4=toHex4(-7);
+        System.out.println(res4);
+        System.out.println(Integer.numberOfLeadingZeros(0));
     }
+//    方法一
     public  static  String toHex(int nums){
         if (nums==0)
             return "0";
@@ -25,6 +27,7 @@ public class toHex_405 {
         }
         return sb.toString();
     }
+//    方法二
     public static String toHex2(int num){
         int temp;
         StringBuffer sb = new StringBuffer();
@@ -48,5 +51,25 @@ public class toHex_405 {
         }
         return bl.toString();
     }
+    public static String toHex4(int num ){
+        StringBuffer sb = new StringBuffer();
+//        int类型是32位，所以Integer.SIZE为32，numberOfLeadingZeros方法是返回无符号整数,从最高位开始到最低位连续0的个数 例如： 0000 0000 0000 0000 1000 1100 0000 1100 返回的是16
+        int l=Integer.SIZE-Integer.numberOfLeadingZeros(num);
+//       将num 按照每四位 二进制一组 求出多少组即多少位十六进制位数
+        int len=(l+3)/4;
+        char [] chars=new char[len];
+        int temp;
+        if (num==0){
+            return "0";
+        }
+        while (num!=0){
+            temp=num & 15;
+            chars[--len]= temp<10 ?(char) (temp+48) :(char) (temp+87);
+            num=num>>>4;
+        }
+
+        return new String(chars);
+    }
+
 
 }

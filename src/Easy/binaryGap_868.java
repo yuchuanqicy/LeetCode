@@ -26,7 +26,19 @@ public class binaryGap_868 {
     }
     /*方法2，位运算*/
     public int binaryGap1(int n){
-
-        return 0;
+        int ans=0;
+        int index=-1;
+        for (int i = 0; n!=0 ; i++) {
+            if ((n&1)==1){
+                if (index==-1){
+                    index=i;
+                } else {
+                    ans=Math.max(ans,i-index);
+                    index=i;
+                }
+            }
+            n=n>>1;
+        }
+        return ans;
     }
 }

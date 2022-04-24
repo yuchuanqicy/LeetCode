@@ -18,7 +18,7 @@ public class Test {
 //        System.out.println(toGoatLatin_824.toGoatLatin("I speak Goat Latin"));
         binaryGap_868 binaryGap_868 = new binaryGap_868();
 
-        System.out.println(binaryGap_868.binaryGap(22));
+        System.out.println(binaryGap_868.binaryGap1(22));
 
     }
 }

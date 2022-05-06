@@ -1,6 +1,6 @@
 package Easy;
 
-import sun.misc.PostVMInitHook;
+
 
 /**
  * @Author: yuchuanqi

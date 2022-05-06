@@ -1,4 +1,5 @@
 package main;
+import Easy.RecentCounter_933;
 import Easy.binaryGap_868;
 import Medium.Solution_398;
 import Medium.lengthLongestPath_388;
@@ -18,8 +19,9 @@ public class Test {
 //
 //        System.out.println(toGoatLatin_824.toGoatLatin("I speak Goat Latin"));
 //        binaryGap_868 binaryGap_868 = new binaryGap_868();
-        Solution_398 solution_398=new Solution_398(new int[]{1,2,3,3,3});
-        System.out.println(solution_398.pick(3));
-
+//        Solution_398 solution_398=new Solution_398(new int[]{1,2,3,3,3});
+//        System.out.println(solution_398.pick(3));
+        RecentCounter_933 re=new RecentCounter_933();
+        System.out.println(re.ping(3002));
     }
 }

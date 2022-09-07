@@ -18,7 +18,6 @@ public class SelectSort {
                     arr[i]=tem;
                 }
             }
-
         }
         return  arr;
     }

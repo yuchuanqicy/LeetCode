@@ -12,7 +12,7 @@ public class Bubble_Sort {
     *@Params [nums]
     *@Retuen int[]
     */
-    public  int [] bubble_Sort(int nums[]){
+    public  int [] bubble_Sort(int [] nums){
         int len =nums.length;
         for (int i = 0; i < len-1; i++) {
             for (int j =1; j <len-i-1 ; j++) {

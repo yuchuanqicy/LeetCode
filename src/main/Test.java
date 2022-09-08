@@ -17,7 +17,7 @@ public class Test {
     public static void main(String[] args) {
         Bubble_Sort bubble_sort=new Bubble_Sort();
         SelectSort selectSort=new SelectSort();
-        int [] test=new int[]{4,32,6,8,9,10};
+        int [] test=new int[]{20,32,6,1,8,9,10};
         System.out.println(Arrays.toString(selectSort.Select_Sort(test)));
     }
 }

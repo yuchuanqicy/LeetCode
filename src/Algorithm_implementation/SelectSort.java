@@ -9,14 +9,18 @@ package Algorithm_implementation;
 public class SelectSort {
     public int [] Select_Sort(int  [] arr ){
         int len=arr.length;
-        for (int i = 0; i < len; i++) {
-            for (int j = i; j < len; j++) {
-                int tem;
-                if (arr[j]<arr[i]){
-                    tem=arr[j];
-                    arr[j]=arr[i];
-                    arr[i]=tem;
+        for (int i = 0; i < len-1; i++) {
+            int min=i;
+            int temp;
+            for (int j = i+1; j < len; j++) {
+                if (arr[min]>arr[j]){
+                   min=j;
                 }
+            }
+            if (min!=i){
+                temp=arr[min];
+                arr[min]=arr[i];
+                arr[i]=temp;
             }
         }
         return  arr;

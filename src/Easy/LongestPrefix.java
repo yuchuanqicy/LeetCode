@@ -50,7 +50,7 @@ public class LongestPrefix {
         String result = solution(stringArray);
         System.out.println("最大公共字符串:"+result);
     }
-//时间复杂度度为O(mn)
+    //横向扫描
     public static String solution(String[] strs) {
         if (strs.length==0)
             return " ";
@@ -66,6 +66,23 @@ public class LongestPrefix {
                 return " ";
         }
         return pre;
-
     }
+    //纵向扫描
+    public static String  longestPrefix(String [] strs){
+        if (strs.length==0||strs==null)
+            return "";
+        int len=strs[0].length();
+        int count=strs.length;
+        for (int i = 0; i < len; i++) {
+            char c =strs[0].charAt(i);
+            for (int j = 1; j < count; j++) {
+                if (i==strs[j].length() || strs[j].charAt(i)!=c){
+                    return strs[0].substring(0,i);
+                }
+            }
+
+        }
+        return strs[0];
+    }
+
 }

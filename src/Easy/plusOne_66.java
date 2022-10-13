@@ -8,7 +8,14 @@ package Easy;
  */
 public class plusOne_66 {
     public int[] plusOne(int[] digits) {
-
-        return null;
+        int len=digits.length;
+        for (int i = len-1; i >=0; i--) {
+            digits[i]++;
+            if (digits[i]%10!=0)
+                return digits;
+        }
+        int [] res=new int[len+1];
+        res[0]=1;
+        return res;
     }
 }

@@ -8,6 +8,8 @@ package Easy;
  */
 public class lengthOfLastWord_58 {
     public int lengthOfLastWord(String s) {
+        if (s=="")
+            return 0;
         s=s.trim();
         int len=s.length();
         int res=0;

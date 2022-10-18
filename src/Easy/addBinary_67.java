@@ -8,15 +8,24 @@ package Easy;
  */
 public class addBinary_67 {
     public String addBinary(String a, String b) {
-        int len1=a.length();
-        int len2=b.length();
-        int n=Math.max(len1,len2);
+        StringBuilder sb = new StringBuilder();
         //判断是否进位
         int ans=0;
-        for (int i =0;i>=0 ;i++) {
-
+        int lena=a.length();
+        int lenb=b.length();
+        for (int i=lena-1,j=lenb-1;i>=0 || j>=0;i--,j--){
+            int sum = ans;
+            sum+=i>=0? a.charAt(i)-'0':0;
+            sum+=j>=0? b.charAt(j)-'0':0;
+            sb.append(sum%2);
+            ans=sum/2;
         }
-        return null;
+        if (ans==1){
+            sb.append('1');
+        }
+        return sb.reverse().toString();
+
+
 
     }
 }

@@ -21,4 +21,5 @@ public class inorderTraversal_94 {
         res.add(root.val);
         Order(root.right,res);
     }
+
 }

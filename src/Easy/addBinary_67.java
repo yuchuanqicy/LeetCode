@@ -25,7 +25,5 @@ public class addBinary_67 {
         }
         return sb.reverse().toString();
 
-
-
     }
 }

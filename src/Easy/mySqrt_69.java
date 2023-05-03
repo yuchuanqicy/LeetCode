@@ -21,17 +21,19 @@ public class mySqrt_69 {
     *@Retuen
     */
     public int mySqrt1(int x){
-        long i=0;
+        int i=0;
         int left=0;
         int right=x-1;
         int mid=0;
         while (left<=right){
             mid=(left+right)/2;
-            if ((long)mid*mid<x){
-
+            if ((long)mid*mid<=x){
+                i=mid;
+                left=mid+1;
+            }else {
+                right=mid-1;
             }
         }
-
-        return 0;
+        return i;
     }
 }
